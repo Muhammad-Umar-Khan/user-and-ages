@@ -1,7 +1,7 @@
-import React, { ReactDOM } from "react";
 import Button from "../Button/Button";
 import Card from "../Card/Card";
 import "./Modal.css";
+import ReactDOM from "react-dom";
 
 const Modal = (props) => {
   const Backdrop = (props) => {
@@ -29,7 +29,8 @@ const Modal = (props) => {
           title={props.title}
           message={props.message}
           onConfirm={props.onConfirm}
-        />
+        />,
+        document.getElementById("overlay-root")
       )}
     </div>
   );
